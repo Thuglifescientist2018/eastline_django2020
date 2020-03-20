@@ -1,0 +1,19 @@
+{% extends "apps/blog/blog_base.html" %}
+{% load static %}
+{% block content %}
+<h5> Logged in as {{user}}</h5>
+<form method="POST" id="blog_create_form"> {% csrf_token %}
+{{form.as_p}}
+<button type="submit" id="blog_submit" class="btn btn-success btn-lg "> Post Blog</button>
+</form>
+
+    <ul>
+        <li>
+<a href="/blog/list" class="text-white"> See all Blog Posts</a></li>
+<li>
+<a href="/" class="text-white"> Go to Home</a></li>
+</ul>
+
+<link href="{% static 'css/blog_create.css' %}" rel="stylesheet">
+<script src="{% static 'js/blog_create.js' %}"></script>
+{% endblock %}

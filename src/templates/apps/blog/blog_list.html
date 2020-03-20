@@ -1,0 +1,33 @@
+{% extends 'apps/blog/blog_base.html' %}
+
+{% block content %}
+<h5>Logged in as {{user}}</h5>
+{% load static %}
+<div id="menu"> 
+   <a href="/"> <i class="fas fa-home"></i></a>
+    <a href="javascript:history.back()"><i class="fas fa-backward"></i></a>
+</div>
+{% for b in blog %}
+
+<ul class="container mt-5 ">
+    <h4><li><a id="blog_topics" href="/blog/{{b.slug}}">{{b.topic}}</a> </li></h4>
+    <a style="color: white" href="/blog/{{b.slug}}/update"><button class="btn btn-dark btn-lg mt-5">  Edit </button></a>
+    <a style="color: white" href="/blog/{{b.slug}}/delete"><button class="btn btn-danger btn-lg ml-5 mt-5"> Delete </button></a>
+</ul>
+
+{% endfor %}
+{% if  not blog %}
+<h1 style="margin: 20%;">Not a single Post</h1>
+{% endif %}
+
+
+<h3 id="login_or_signup"> <a href="/login">Login</a> or <a href="/">Signup</a>  </h3>
+
+
+<link href="{% static 'css/blog_list.css' %}" rel="stylesheet">
+<script src="https://kit.fontawesome.com/273c88090b.js" crossorigin="anonymous">
+</script>
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+{% endblock %}

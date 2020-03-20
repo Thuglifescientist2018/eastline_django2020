@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<body style="background: url('https://bit.ly/2TFKJrn');">
+    <link href="{% static  'assets/css/navbar.css' %}">
+{% include 'navbar.html' %}
+
+    
+{% if not user.is_authenticated %}
+    <div id="html-form-signup">
+{% include "signup.html" %}
+</div>
+{% endif %}
+
+{% if user.is_authenticated %}
+{% for blogpost in obj %}
+<div id="user_posts">somethig elsse</div>
+{% endfor %}
+{% endif %}
+
+<link href="{% static  '/css/home.css' %}" rel="stylesheet">
+<link href="{% static '/assets/css/navbar/navbar.css' %}" rel="stylesheet">
+<script src="{% static  '/js/home.js' %}"></script>
+<script src="https://kit.fontawesome.com/273c88090b.js" crossorigin="anonymous">
+</script>
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+
+
+{% endblock %}
+</body>

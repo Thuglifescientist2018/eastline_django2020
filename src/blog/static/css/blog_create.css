@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(180, 138, 175);
+}
+#blog_create_form {
+    
+    margin-left: 0%;
+    background-color: rgb(180, 80, 150);
+}
+
+#blog_create_form p:first-of-type input:first-of-type {
+    width: 95%;
+    height: 70px;
+    padding-left: 2%;
+    background-color: rgb(221, 164, 223);
+    margin-top: 2%;
+    margin-left: 3%;
+    border: none;
+    color: black;
+    font-size:  27px;
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+}
+#blog_create_form textarea { 
+
+    width: 95%;
+    padding: 2%;
+    background-color: rgb(221, 164, 223);
+    margin-left: 3%;
+    color: black;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+}
+#blog_create_form label  {
+    display: none;
+}
+#blog_submit {
+    margin-left: 0px;
+    width: 100%;
+    letter-spacing: 30px;
+    font-family: 'Anton', sans-serif
+}
+ul li {
+    font-weight: 800;
+    margin-left: 15%;
+    margin-top: 3%;
+
+}
+input[name=slug] {
+    display: none;
+}

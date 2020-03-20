@@ -1,0 +1,44 @@
+#htmlloginform {
+  font-size: large;
+  background: url('https://bit.ly/2VW7bOd');
+  opacity: 0.7;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 250px;
+  max-height: 300px;
+  position: sticky;
+  color: white;
+  margin-top: 200px;
+  font-family: 'Handlee', cursive;
+  margin-left: 700px;
+ 
+
+}
+#htmlloginform input{ 
+    margin: 0;
+    margin-left: 60px;
+    padding-left: 40px;
+    background-color: black;
+    height: 50px;
+    color: white;
+    opacity: 0.8;
+  
+    
+}
+#htmlloginform p {
+    margin: 0;
+    margin-left: 40px;
+    font-size: xx-large;
+    
+}
+
+#backward_icon {
+  color: black;
+  
+}
+#backward_icon i {
+  font-size: 100px;
+}
+#backward_icon:hover {
+  color: aqua;
+}

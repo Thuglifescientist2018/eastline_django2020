@@ -1,0 +1,21 @@
+{% extends "apps/blog/blog_base.html" %}
+
+{% block content %}
+{% load static %}
+<ul class="container mt-5">
+<li> <a href="/blog/create"> Create Blog</a></li> 
+<li> <a href="/blog/list"> See all Blog Posts</a></li>
+</ul>
+<a class="nav_link_home" href="/"><i class="fas fa-home"></i> Home </a>
+
+
+
+<!-- Including all necessary fontawesome and custom css files -->
+<link href="{% static 'css/blog_home.css' %}" rel="stylesheet">
+<script src="https://kit.fontawesome.com/273c88090b.js" crossorigin="anonymous">
+</script>
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+
+{% endblock %}

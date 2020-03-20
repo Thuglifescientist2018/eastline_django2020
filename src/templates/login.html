@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" id="htmlloginform" > {% csrf_token %}
+   {{form.as_p}}
+   <a href="javascript:history.back()"></a>
+   <button type="submit" class="btn btn-success btn-lg" onclick=javascript:history.back()> Login </button>
+</form>
+<h1 style="margin-left: 700px;"> Go back to  <a  class="text-warning text-decoration-none" href="/" > Home</a></h1> 
+{% if user.is_authenticated %}
+<p> Logged in as {{user}}  </p>
+{% endif %}
+
+<a  id="backward_icon" href="javascript:history.back()"></a><i id="goback" class="fas fa-backward"></i>
+</a>
+{% load static %}
+<link href="{% static 'css/log_in/login.css' %}" rel="stylesheet">
+<script src="https://kit.fontawesome.com/273c88090b.js" crossorigin="anonymous">
+</script>
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+
+{% endblock %}

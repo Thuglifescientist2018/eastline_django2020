@@ -1,0 +1,30 @@
+{% extends 'apps/blog/blog_base.html' %}
+
+{% block content %}
+{% load static %}
+<div id="menu" >
+   <a href="/"><i class="fas fa-home"></i></a>
+    <a href="/blog/list"><i class="fas fa-backward"></i></a>
+</div>
+{% if user.is_superuser %}
+<p style="margin-left: 500px;"> username : {{user}} [Admin] </p>
+{% else %}
+<p style="margin-left: 500px;"> username : {{user}} </p>
+{% endif %}
+<div id="blog_render">
+<h2 id="topic">{{blog.topic}} </h2>
+<p id="content">{{blog.write}}</p>
+</div>
+<a href="/blog/{{blog.slug}}/update"><button class="update-btn">Edit</button>
+<div class="social_links bg-dark">
+
+</div>
+ <h3> Login or Signup  </h3>
+<link href="{% static 'css/blog_render.css' %}" rel="stylesheet">
+<script src="https://kit.fontawesome.com/273c88090b.js" crossorigin="anonymous">
+</script>
+
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+{% endblock %}

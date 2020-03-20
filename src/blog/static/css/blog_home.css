@@ -1,0 +1,40 @@
+body {
+    background-color: peru;
+}
+
+ul li a{
+    color: rgb(240, 199, 124);
+    font-size: 90px;
+    font-stretch: expanded;
+    font-family: 'Fredoka One', cursive;
+    
+}
+
+
+ul li a:hover {
+    color: rgb(238, 214, 171);
+    text-decoration: none;
+    
+}
+ul li {
+    list-style: none;
+}
+
+.fa-home {
+        font-size: 200px;
+        margin-left: 30%;
+       
+        
+}
+.home {
+    font-family: 'Fredoka One', cursive;
+    
+}
+.nav_link_home {
+    color: rgb(240, 199, 124);
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+}
+.nav_link_home:hover {
+    color: rgb(238, 214, 171);
+}

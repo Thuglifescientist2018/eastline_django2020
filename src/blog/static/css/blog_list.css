@@ -1,0 +1,44 @@
+body {
+    background-color: peru;
+    
+}
+#blog_topics {
+    color: white;
+}
+h4 li { 
+    list-style: none;
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    
+}
+h4 li a {
+    color: rgb(248, 220, 193) !important;
+    text-decoration: none !important;
+    text-shadow: 10px 10px 50px red;
+}
+h4 li a:hover {
+    color: rgb(255, 237, 218) !important;
+    text-shadow: 10px 30px 70px red;
+}
+.fa-home, .fa-backward {
+    font-size: 80px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.fa-home:hover, .fa-backward:hover{
+    color: white !important;
+}
+
+.btn-warning:hover {
+    box-shadow: 10px 10px 10px 10px red !important;
+}
+#menu {
+    position: fixed;
+
+}
+#menu a {
+    color: black;
+}
+#login_or_signup a {
+    color: black !important;
+}
